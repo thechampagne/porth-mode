@@ -455,7 +455,9 @@
 (define-derived-mode porth-mode prog-mode "Porth"
   "A major mode for the Porth programming language."
   :syntax-table porth-mode-syntax-table
-  (setq-local font-lock-defaults '(porth-font-lock-keywords)))
+  (setq-local font-lock-defaults '(porth-font-lock-keywords))
+  (setq-local comment-start "// ")
+  (setq-local comment-end ""))
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.porth\\'" . porth-mode))
